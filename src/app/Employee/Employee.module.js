@@ -6,35 +6,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
+var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
-var welcome_component_1 = require("./home/welcome.component");
-var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
-var Employee_component_1 = require("./Employee/Employee.component");
-var AppModule = (function () {
-    function AppModule() {
+var Employee_Component_1 = require("./Employee.Component");
+var EmployeeModule = (function () {
+    function EmployeeModule() {
     }
-    return AppModule;
+    return EmployeeModule;
 }());
-AppModule = __decorate([
+EmployeeModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule,
+        imports: [http_1.HttpModule,
             forms_1.FormsModule,
-            http_1.HttpModule,
             common_1.CommonModule,
-            router_1.RouterModule.forRoot([
-                { path: 'welcome', component: welcome_component_1.WelcomeComponent },
-                { path: 'Employee', component: Employee_component_1.EmployeeComponent },
+            router_1.RouterModule.forChild([
+                { path: 'Employee', component: Employee_Component_1.EmployeeComponent },
                 { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
             ])
         ],
-        declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent, Employee_component_1.EmployeeComponent],
-        bootstrap: [app_component_1.AppComponent]
+        declarations: [Employee_Component_1.EmployeeComponent],
+        providers: []
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], EmployeeModule);
+exports.EmployeeModule = EmployeeModule;
+//# sourceMappingURL=Employee.module.js.map
