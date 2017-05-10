@@ -18,8 +18,7 @@ var EmployeeModule = (function () {
 }());
 EmployeeModule = __decorate([
     core_1.NgModule({
-        imports: [http_1.HttpModule,
-            forms_1.FormsModule,
+        imports: [http_1.HttpModule, forms_1.FormsModule,
             common_1.CommonModule,
             router_1.RouterModule.forChild([
                 { path: 'Employee', component: Employee_Component_1.EmployeeComponent },

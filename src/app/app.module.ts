@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 
 import { WelcomeComponent } from './home/welcome.component'
@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router'
 import { CommonModule } from '@angular/common'
 
 import { EmployeeModule } from './Employee/Employee.module'
-import {EmployeeComponent} from './Employee/Employee.component'
+import { EmployeeComponent } from './Employee/Employee.component'
 
 @NgModule({
   imports: [BrowserModule,
@@ -23,7 +23,7 @@ import {EmployeeComponent} from './Employee/Employee.component'
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ])
   ],
-  declarations: [AppComponent, WelcomeComponent,EmployeeComponent],
+  declarations: [AppComponent, WelcomeComponent, EmployeeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,6 +9,26 @@ var core_1 = require("@angular/core");
 var EmployeeComponent = (function () {
     function EmployeeComponent() {
     }
+    EmployeeComponent.prototype.emp_Added = function () {
+        alert("Employee added! Added employees will be displayed in the page once you click OK");
+        this.employees =
+            [{
+                    "FirstName": "Rahul",
+                    "LastName": "Maurya",
+                    "EmployeeID": "P0202",
+                    "Title": "SSE",
+                    "Domain": ".NET, Angular",
+                    "Email_Address": "rahul@tavant.com"
+                },
+                {
+                    "FirstName": "Akhil",
+                    "LastName": "Kumar",
+                    "EmployeeID": "P0232",
+                    "Title": "SSE",
+                    "Domain": "Java,NetBeans",
+                    "Email_Address": "akhil@tavant.com"
+                }];
+    };
     return EmployeeComponent;
 }());
 EmployeeComponent = __decorate([

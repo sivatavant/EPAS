@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
                      <li>
                         <a [routerLink]="['/Employee']"> Employee List
                         </a>
-                    </li>
+                     </li>
                 </ul>
             </div>
         </nav>

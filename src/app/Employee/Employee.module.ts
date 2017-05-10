@@ -9,8 +9,7 @@ import { EmployeeComponent } from './Employee.Component'
 @NgModule
     (
     {
-        imports: [HttpModule,
-            FormsModule,
+        imports: [HttpModule, FormsModule,
             CommonModule,
             RouterModule.forChild([
                 { path: 'Employee', component: EmployeeComponent },
